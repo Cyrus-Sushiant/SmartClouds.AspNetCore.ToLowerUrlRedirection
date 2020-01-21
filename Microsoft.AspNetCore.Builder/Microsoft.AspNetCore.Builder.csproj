@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>Cyrus</Authors>
+    <Version>1.0.0</Version>
+    <Description>Extension methods for the ToLowerUrlRedirection middleware.</Description>
+    <RepositoryUrl>https://github.com/Cyrus-Sushiant/SmartClouds.AspNetCore.ToLowerUrlRedirection</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <Company>SmartClouds.co</Company>
+    <PackageId>SmartClouds.AspNetCore.ToLowerUrlRedirection</PackageId>
+    <Copyright>MIT License</Copyright>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/Cyrus-Sushiant/SmartClouds.AspNetCore.ToLowerUrlRedirection</PackageProjectUrl>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageIconUrl />
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Product>SmartClouds.AspNetCore.ToLowerUrlRedirection</Product>
+    <AssemblyName>SmartClouds.AspNetCore.ToLowerUrlRedirection</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
