@@ -11,7 +11,7 @@ namespace Microsoft.AspNetCore.Builder
         {
             var req = context.HttpContext.Request;
 
-            if (!(req.Host.Value.Any(ch => char.IsUpper(ch)) || req.Path.Value.Any(ch => char.IsUpper(ch)) || req.QueryString.Value.Any(ch => char.IsUpper(ch))))
+            if (req.Method != "GET" || !(req.Host.Value.Any(ch => char.IsUpper(ch)) || req.Path.Value.Any(ch => char.IsUpper(ch)) || req.QueryString.Value.Any(ch => char.IsUpper(ch))))
             {
                 context.Result = RuleResult.ContinueRules;
                 return;
