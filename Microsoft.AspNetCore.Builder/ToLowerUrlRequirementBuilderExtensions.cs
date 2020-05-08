@@ -13,7 +13,7 @@ namespace Microsoft.AspNetCore.Builder
         /// </summary>
         /// <param name="app">The <see cref="IApplicationBuilder"/> instance this method extends.</param>
         /// <returns>The <see cref="IApplicationBuilder"/> for ToLowerUrlRedirection.</returns>
-        public static IApplicationBuilder UseToLowerUrlRedirection(this IApplicationBuilder app)
+        public static IApplicationBuilder UseToLowerUrlRedirection(this IApplicationBuilder app, bool excludeQueryString = false)
         {
             if (app == null)
             {
@@ -21,7 +21,7 @@ namespace Microsoft.AspNetCore.Builder
             }
 
             var options = new RewriteOptions();
-            options.AddRedirectToLowerUrl();
+            options.AddRedirectToLowerUrl(excludeQueryString);
             app.UseRewriter(options);
             return app;
         }
